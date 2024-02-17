@@ -1,5 +1,10 @@
-actor {
-  public query func greet(name : Text) : async Text {
-    return "Hello, " # name # "!";
-  };
-};
+actor Assistant{
+    type ToDo = {
+      description:Text;
+      completed:Bool;
+    };
+
+    func natHash(n:Nat) : Hash.Hash {
+      Text.hash(Nat.toText(n))
+    };
+}
